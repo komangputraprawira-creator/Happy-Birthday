@@ -55,3 +55,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", function() {
+  
+  // 1. KODE YANG SUDAH ADA (Logika pindah halaman & animasi bunga)
+  // ... (semua kode lama Anda di sini) ...
+
+  // 2. KODE BARU (Logika Autoplay Musik)
+  // Taruh di sini, tepat sebelum tanda kurung kurawal penutup ini:
+  const welcomeScreen = document.getElementById('welcome-screen');
+  const startBtn = document.getElementById('start-btn');
+  const audio = document.querySelector('audio');
+
+  startBtn.addEventListener('click', function() {
+    if (audio) {
+      audio.play();
+    }
+    welcomeScreen.style.opacity = '0';
+    setTimeout(() => {
+      welcomeScreen.style.display = 'none';
+    }, 500);
+  });
+
+}); // <--- Tanda kurung kurawal penutup ini harus ada di baris paling terakhir!
